@@ -31,16 +31,3 @@ No cloud APIs. No external dependencies. Entirely LAN-based.
 - TV setting:  
   **Settings → System → Power Mode → Quick Start+ = ON**  
 - `curl` installed  
-
----
-
-## 1. Pairing with SmartCast
-
-### 1.1 Start pairing  
-Replace `<TV_IP>` with your TV’s IP.
-
-```bash
-curl -ks -X PUT \
-  "https://<TV_IP>:7345/pairing/start" \
-  -H "Content-Type: application/json" \
-  -d '{"DEVICE_NAME":"linux_box","DEVICE_ID":"linux_box_01"}'
