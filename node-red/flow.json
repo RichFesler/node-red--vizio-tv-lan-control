@@ -1,0 +1,38 @@
+[
+  {
+    "id": "vizio",
+    "type": "tab",
+    "label": "Vizio Control"
+  },
+
+  { "id":"pwr","type":"inject","z":"vizio","name":"Power","props":[{"p":"payload"}],"payload":"power","payloadType":"str","x":120,"y":60,"wires":[["exec"]] },
+  { "id":"vu","type":"inject","z":"vizio","name":"VolUp","props":[{"p":"payload"}],"payload":"volup","payloadType":"str","x":120,"y":100,"wires":[["exec"]] },
+  { "id":"vd","type":"inject","z":"vizio","name":"VolDown","props":[{"p":"payload"}],"payload":"voldown","payloadType":"str","x":120,"y":140,"wires":[["exec"]] },
+  { "id":"mt","type":"inject","z":"vizio","name":"Mute","props":[{"p":"payload"}],"payload":"mute","payloadType":"str","x":120,"y":180,"wires":[["exec"]] },
+  { "id":"inp","type":"inject","z":"vizio","name":"Input","props":[{"p":"payload"}],"payload":"input","payloadType":"str","x":120,"y":220,"wires":[["exec"]] },
+
+  { "id":"up","type":"inject","z":"vizio","name":"Up","props":[{"p":"payload"}],"payload":"up","payloadType":"str","x":120,"y":280,"wires":[["exec"]] },
+  { "id":"down","type":"inject","z":"vizio","name":"Down","props":[{"p":"payload"}],"payload":"down","payloadType":"str","x":120,"y":320,"wires":[["exec"]] },
+  { "id":"left","type":"inject","z":"vizio","name":"Left","props":[{"p":"payload"}],"payload":"left","payloadType":"str","x":120,"y":360,"wires":[["exec"]] },
+  { "id":"right","type":"inject","z":"vizio","name":"Right","props":[{"p":"payload"}],"payload":"right","payloadType":"str","x":120,"y":400,"wires":[["exec"]] },
+  { "id":"enter","type":"inject","z":"vizio","name":"Enter","props":[{"p":"payload"}],"payload":"enter","payloadType":"str","x":120,"y":440,"wires":[["exec"]] },
+  { "id":"home","type":"inject","z":"vizio","name":"Home","props":[{"p":"payload"}],"payload":"home","payloadType":"str","x":120,"y":480,"wires":[["exec"]] },
+
+  {
+    "id": "exec",
+    "type": "exec",
+    "z": "vizio",
+    "command": "/home/<user>/vizio_key.sh",
+    "addpay": true,
+    "append": "",
+    "useSpawn": "false",
+    "name": "Vizio Command",
+    "x": 390,
+    "y": 260,
+    "wires": [
+      [],
+      [],
+      []
+    ]
+  }
+]
